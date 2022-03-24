@@ -1,0 +1,23 @@
+{
+  "name": "sandboxing-in-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pz1971/sandboxing-in-nodejs.git"
+  },
+  "author": "Parvez Mia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pz1971/sandboxing-in-nodejs/issues"
+  },
+  "homepage": "https://github.com/pz1971/sandboxing-in-nodejs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "v8-sandbox": "^2.2.2"
+  }
+}
