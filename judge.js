@@ -3,6 +3,8 @@ const fs = require("fs");
 const { stdin } = require("process");
 
 exports.judgeCpp = async (filename) => {
+    var firejail = 'firejail --rlimit-cpu=3 --rlimit-as=10m --rlimit-fsize=10m --rlimit-nofile=5 --nonewprivs ';
+    
     // compile the code
     await exec("g++ " + filename + " -o ./OJ/a", async (error, stdout, stderr) => {
       if (error) {
@@ -14,7 +16,8 @@ exports.judgeCpp = async (filename) => {
         return;
       }
     
-      const child = await spawn("./OJ/a"); //where a is the exe file generated on compiling the code.
+        // run the code
+      const child = await exec(firejail + "./OJ/a"); //where a is the exe file generated on compiling the code.
       
         //   send the input to the code
         await fs.readFile("./OJ/inp.txt", "utf8", async (err, data) => {
