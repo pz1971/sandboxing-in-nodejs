@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/pz1971/sandboxing-in-nodejs#readme",
   "dependencies": {
+    "child-process": "^1.0.2",
+    "fs": "^0.0.1-security",
     "nodemon": "^2.0.15",
     "v8-sandbox": "^2.2.2"
   }
